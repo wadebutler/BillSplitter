@@ -46,7 +46,7 @@ const results = () => {
     document.querySelector(".tipPer").innerHTML = personalTip();
     document.querySelector(".costPer").innerHTML = personalCost();
     document.querySelector(".totalPer").innerHTML = individualTotal();
-    
+    document.querySelector(".personDisplay").innerHTML = document.querySelector(".people").value;
 }
 
 // SCREEN SWITCH CONTROLS
