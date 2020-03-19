@@ -1,19 +1,12 @@
-const getResults = () => {
-    console.log("total meals tip " + mealTip());
-    console.log("each person tips " + personalTip());
-    console.log("cost of meal per person " + personalCost());
-    console.log("each person pays " + individualTotal() + " total");
+const getResultsSimple = () => {
+    personalTip();
+    personalCost();
+    individualTotal();
+    results();
+    handleDisplay();
 }
 
-const mealTip = () => {
-    
-    const tipPercent = document.querySelector(".tip").value / 100;
-    const cost = document.querySelector(".cost").value;
-
-    const totalTip = cost * tipPercent;
-    return totalTip.toFixed(2);
-}
-
+//tip calculator
 const personalTip = () => {
     const cost = document.querySelector(".cost").value;
     const people = document.querySelector(".people").value;
@@ -25,6 +18,7 @@ const personalTip = () => {
     return dividedTip.toFixed(2);
 }
 
+// cost per person calculator
 const personalCost = () => {
     const cost = document.querySelector(".cost").value;
     const people = document.querySelector(".people").value;
@@ -34,6 +28,7 @@ const personalCost = () => {
     return dividedCost.toFixed(2);
 }
 
+// gets the total cost per individual
 const individualTotal = () => {
     const cost = document.querySelector(".cost").value;
     const people = document.querySelector(".people").value;
@@ -47,3 +42,37 @@ const individualTotal = () => {
 
     return soloTotal.toFixed(2);
 } 
+
+// display the results on page
+const results = () => {
+    document.querySelector(".tipPer").innerHTML = personalTip();
+    document.querySelector(".costPer").innerHTML = personalCost();
+    document.querySelector(".totalPer").innerHTML = individualTotal();
+}
+
+
+// SCREEN SWITCH CONTROLS
+// turn off the form and display results
+const handleDisplay = () => {
+    document.querySelector(".form").style.display = "none";
+    document.querySelector(".results").style.display = "block";
+}
+
+// turn off the results and display the original form
+const goBack = () => {
+    document.querySelector(".form").style.display = "block";
+    document.querySelector(".results").style.display = "none";
+    document.querySelector(".cost").value = "";
+}
+
+// go to simple tip calculator
+const simple = () => {
+    document.querySelector(".advanced").style.display = "none";
+    document.querySelector(".simple").style.display = "block";
+}
+
+// go to advanced tip calculator
+const advanced = () => {
+    document.querySelector(".simple").style.display = "none";
+    document.querySelector(".advanced").style.display = "block";
+}

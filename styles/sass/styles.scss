@@ -1,2 +1,10 @@
-@import "partials/form";
-@import "partials/results";
+@import "partials/simpleForm";
+@import "partials/simpleResults";
+
+html {
+    font-size: 62.5%;
+}
+
+.advanced {
+    display: none;
+}

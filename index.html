@@ -11,44 +11,56 @@
         <h1>Bill Spliter</h1>
     </header>
     <main>
-        <section>
-            <div class="formItem">
-                <label for="cost">Cost:</label>
-                <input class="cost" id="cost" type="number">
-            </div>
-            <div class="formItem">
-                <label for="people">Number of People:</label>
-                <select class="people" name="people" id="people">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                </select>
-            </div>            
-            <div class="formItem">
-                <label for="tip">Tip Percent:</label>
-                <select class="tip" name="tip" id="tip">
-                    <option value="10">10%</option>
-                    <option value="15">15%</option>
-                    <option value="20">20%</option>
-                    <option value="25">25%</option>
-                    <option value="30">30%</option>
-                </select>
-            </div>
+        <div>
+            <button onclick="simple()">Simple</button>
+            <button onclick="advanced()">Advanced</button>
+        </div>
 
-            <button onclick="getResults()">Submit</button>
-        </section>
+        <div class="simple">
+            <section class="form">
+                <div class="formItem">
+                    <label for="cost">Cost:</label>
+                    <input class="cost" id="cost" type="number">
+                </div>
+                <div class="formItem">
+                    <label for="people">Number of People:</label>
+                    <select class="people" name="people" id="people">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="formItem">
+                    <label for="tip">Tip Percent:</label>
+                    <select class="tip" name="tip" id="tip">
+                        <option value="10">10%</option>
+                        <option value="15">15%</option>
+                        <option value="20">20%</option>
+                        <option value="25">25%</option>
+                        <option value="30">30%</option>
+                    </select>
+                </div>
+            
+                <button onclick="getResultsSimple()">Submit</button>
+            </section>
+            <section class="results">
+                <p>Tip Per Person: <span class="tipPer">0</span></p>
+                <p>Cost Per Person: <span class="costPer">0</span></p>
+                <p>Total Cost Per Person: <span class="totalPer">0</span></p>
+            
+                <button onclick="goBack()">Go Back</button>
+            </section>
+        </div>
 
-        <!-- <section class="results">
-            <p>Total Meal Tip: <span>0</span></p>
-            <p>Tip Per Person: <span>0</span></p>
-            <p>Cost Per Person <span>0</span></p>
-        </section> -->
+        <div class="advanced">
+            <p>hello</p>
+        </div>
 
         <script src="script.js"></script>
     </main>
