@@ -1,10 +1,15 @@
-@import "partials/simpleForm";
-@import "partials/simpleResults";
-
 html {
     font-size: 62.5%;
 }
 
 .advanced {
+    display: none;
+}
+
+.formItem {
+    padding: 10px;
+}
+
+.results {
     display: none;
 }

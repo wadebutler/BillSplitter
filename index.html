@@ -50,16 +50,59 @@
                 <button onclick="getResultsSimple()">Submit</button>
             </section>
             <section class="results">
-                <p>Tip Per Person: <span class="tipPer">0</span></p>
-                <p>Cost Per Person: <span class="costPer">0</span></p>
-                <p>Total Cost Per Person: <span class="totalPer">0</span></p>
+                <h2><span class="personCount"></span> Person Split</h2>
+                <p>Tip: <span class="tipPer">0</span></p>
+                <p>Cost: <span class="costPer">0</span></p>
+                <p>Total Cost: <span class="totalPer">0</span></p>
             
                 <button onclick="goBack()">Go Back</button>
             </section>
         </div>
 
         <div class="advanced">
-            <p>hello</p>
+            <section class="aForm">
+                <div class="formItem">
+                    <label for="aCost">Cost (no tax):</label>
+                    <input id="aCost" type="number">
+                </div>
+                <div class="formItem">
+                    <label for="aRegion">Region (tax):</label>
+                    <select name="aRegion" id="aRegion">
+                        <option value="">Ontario</option>
+                        <option value="">Quebec</option>
+                    </select>
+                </div>
+                <div class="formItem">
+                    <label for="aPeople">Number of People:</label>
+                    <select name="aPeople" id="aPeople">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                </div>
+                <div class="formItem">
+                    <label for="aTip">Tip:</label>
+                    <select name="aTip" id="aTip">
+                        <option value="10">10%</option>
+                        <option value="15">15%</option>
+                        <option value="20">20%</option>
+                        <option value="25">25%</option>
+                        <option value="30">30%</option>
+                    </select>
+                </div>
+                <button>Submit</button>
+            </section>
+            <section class="aResults">
+                <h2><span ></span> Person Split</h2>
+                <p>Tip: <span>0</span></p>
+                <p>Cost: <span>0</span></p>
+            </section>
         </div>
 
         <script src="script.js"></script>
