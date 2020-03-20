@@ -1,19 +1,12 @@
-html {
-    font-size: 62.5%;
-}
+// .advanced {
+//     display: none;
+// }
 
-.advanced {
-    display: none;
-}
+// .aResults {
+//     display: none;
+// }
 
-.aResults {
-    display: none;
-}
-
-.formItem {
-    padding: 10px;
-}
-
-.results {
-    display: none;
-}
+@import "partials/variables";
+@import "partials/global";
+@import "partials/form";
+@import "partials/results";

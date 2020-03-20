@@ -1,17 +1,45 @@
 html {
   font-size: 62.5%;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background: #0477bf;
 }
 
-.advanced {
-  display: none;
+h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
 }
 
-.aResults {
-  display: none;
+h2 {
+  font-size: 3rem;
+}
+
+label, p {
+  font-size: 2.5rem;
+  padding-right: 10px;
+}
+
+select, input, button {
+  border-radius: 5px;
+  border: 1px solid black;
+  font-size: 2rem;
+  padding: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+select:focus, input:focus, button:focus {
+  outline-color: #8c2020;
+}
+
+select:hover, input:hover, button:hover {
+  border: 1px solid white;
+  color: white;
+  background: black;
 }
 
 .formItem {
-  padding: 10px;
+  padding: 20px;
 }
 
 .results {
