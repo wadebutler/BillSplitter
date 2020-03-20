@@ -61,13 +61,15 @@ const goBack = () => {
     document.querySelector(".results").style.display = "none";
     document.querySelector(".cost").value = "";
 }
+
+//  WILL RETURN IF I CAN FIND A GOOD SALES TAX API
 // go to simple tip calculator
-const simple = () => {
-    document.querySelector(".advanced").style.display = "none";
-    document.querySelector(".simple").style.display = "block";
-}
+// const simple = () => {
+//     document.querySelector(".advanced").style.display = "none";
+//     document.querySelector(".simple").style.display = "block";
+// }
 // go to advanced tip calculator
-const advanced = () => {
-    document.querySelector(".simple").style.display = "none";
-    document.querySelector(".advanced").style.display = "block";
-}
+// const advanced = () => {
+//     document.querySelector(".simple").style.display = "none";
+//     document.querySelector(".advanced").style.display = "block";
+// }
