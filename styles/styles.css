@@ -38,6 +38,14 @@ select:hover, input:hover, button:hover {
   background: black;
 }
 
+.advanced {
+  display: none;
+}
+
+.aResults {
+  display: none;
+}
+
 .formItem {
   padding: 20px;
 }
