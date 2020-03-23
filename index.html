@@ -56,7 +56,7 @@
                 <p>Cost: <span class="costPer">0</span></p>
                 <p>Total Cost: <span class="totalPer">0</span></p>
             
-                <button onclick="goBack()">Go Back</button>
+                <button onclick="goBackSimple()">Go Back</button>
             </section>
         </div>
 
@@ -64,17 +64,29 @@
             <section class="aForm">
                 <div class="formItem">
                     <label for="aCost">Cost (no tax):</label>
-                    <input id="aCost" type="number">
+                    <input class="aCost" id="aCost" type="number">
                 </div>
                 <div class="formItem">
-                    <label for="aRegion">Province (tax):</label>
-                    <select name="aRegion" id="aRegion">
-                        
+                    <label for="aRegion">Province tax (Canada Only):</label>
+                    <select class="aRegion" name="aRegion" id="aRegion">
+                        <option value="0.05">Alberta</option>
+                        <option value="0.12">British Columbia</option>
+                        <option value="0.12">Manitoba</option>
+                        <option value="0.15">New Brunswick</option>
+                        <option value="0.15">Newfoundland</option>
+                        <option value="0.05">Northwest Territories</option>
+                        <option value="0.15">Nova Scotia</option>
+                        <option value="0.05">Nunavut</option>
+                        <option value="0.13">Ontario</option>
+                        <option value="0.15">PEI</option>
+                        <option value="0.14">Quebec</option>
+                        <option value="0.11">Saskatchewan</option>
+                        <option value="0.05">Yukon</option>
                     </select>
                 </div>
                 <div class="formItem">
                     <label for="aPeople">Number of People:</label>
-                    <select name="aPeople" id="aPeople">
+                    <select class="aPeople" name="aPeople" id="aPeople">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -88,7 +100,7 @@
                 </div>
                 <div class="formItem">
                     <label for="aTip">Tip:</label>
-                    <select name="aTip" id="aTip">
+                    <select class="aTip" name="aTip" id="aTip">
                         <option value="10">10%</option>
                         <option value="15">15%</option>
                         <option value="20">20%</option>
@@ -96,15 +108,15 @@
                         <option value="30">30%</option>
                     </select>
                 </div>
-                <button>Submit</button>
+                <button onclick="getResultsAdvanced()">Submit</button>
             </section>
             <section class="aResults">
-                <h2><span></span> Person Split</h2>
-                <p>Cost: <span>0</span></p>
-                <p>Tax: <span>0</span></p>
-                <p>Tip: <span>0</span></p>
-                <p>Cost with Tax: <span>0</span></p>
-                <p>Total Cost: <span>0</span></p>
+                <p>Meal Tax: <span class="mealTax">0</span></p>
+                <p>Tip: <span class="advTip">0</span></p>
+                <p>Cost with Tax: <span class="costTax">0</span></p>
+                <p>Total Cost: <span class="aTotal">0</span></p>
+                <p>Cost Per Person: <span class="advancedSplit">0</span></p>
+                <button onclick="goBackAdvanced()">Go Back</button>
             </section>
         </div>
 
